@@ -4,7 +4,7 @@
       "name": "lime",
       "type": "git",
       "dir": null,
-      "ref": "main",
+      "ref": "master",
       "url": "https://github.com/openfl/lime"
     },
     {
@@ -16,7 +16,7 @@
       "name": "flixel",
       "type": "git",
       "dir": null,
-      "ref": "5.5.0",
+      "ref": "master",
       "url": "https://github.com/HaxeFlixel/flixel"
     },
     {
@@ -38,7 +38,7 @@
       "name": "hxcpp",
       "type": "git",
       "dir": null,
-      "ref": "main",
+      "ref": "master",
       "url": "https://github.com/HaxeFoundation/hxcpp"
     },
     {
