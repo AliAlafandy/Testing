@@ -85,6 +85,13 @@
       "dir": null,
       "ref": "master",
       "url": "https://github.com/HaxeFoundation/format"
+    },
+    {
+      "name": "hxp",
+      "type": "git",
+      "dir": null,
+      "ref": "master",
+      "url": "https://github.com/openfl/hxp"
     }
   ]
 }
