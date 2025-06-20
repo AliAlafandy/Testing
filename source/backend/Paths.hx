@@ -32,11 +32,7 @@ class Paths
 			dumpExclusions.push(key);
 	}
 
-	public static var dumpExclusions:Array<String> = ['assets/shared/music/freakyMenu.$SOUND_EXT',
-	#if mobile
-	'assets/shared/mobile/touchpad/bg.png'];
-	#end
-	
+	public static var dumpExclusions:Array<String> = ['assets/shared/music/freakyMenu.$SOUND_EXT', 'assets/shared/mobile/touchpad/bg.png'];
 	/// haya I love you for the base cache dump I took to the max
 	public static function clearUnusedMemory() {
 		// clear non local assets in the tracked assets list
@@ -115,10 +111,9 @@ class Paths
 			if(FileSystem.exists(modded)) return modded;
 		}
 		#end
-		#if mobile
 		if(library == "mobile")
 			return getSharedPath('mobile/$file');
-		#end
+
 		if (library != null)
 			return getLibraryPath(file, library);
 
@@ -341,7 +336,7 @@ class Paths
 			for(mod in Mods.getGlobalMods())
 				if (FileSystem.exists(mods('$mod/$key')))
 					return true;
-				#if linux
+				#if (android || linux)
 				else if (FileSystem.exists(findFile('$mod/$key')))
 					return true;
 				#end
@@ -351,7 +346,7 @@ class Paths
 			
 			if (FileSystem.exists(mods('$key')))
 				return true;
-			#if linux
+			#if (android || linux)
 			else if (FileSystem.exists(findFile(key)))
 				return true;
 			#end
@@ -487,7 +482,7 @@ class Paths
 
 	#if MODS_ALLOWED
 	inline static public function mods(key:String = '') {
-		return #if android StorageUtil.getExternalStorageDirectory() + #else Sys.getCwd() + #end 'mods/' + key;
+		return  #if mobile Sys.getCwd() + #end 'mods/' + key;
 	}
 
 	inline static public function modsFont(key:String) {
@@ -541,7 +536,7 @@ class Paths
 			var fileToCheck:String = mods(Mods.currentModDirectory + '/' + key);
 			if(FileSystem.exists(fileToCheck))
 				return fileToCheck;
-				#if linux
+				#if (android || linux)
 				else
 				{
 					var newPath:String = findFile(key);
@@ -555,7 +550,7 @@ class Paths
 			var fileToCheck:String = mods(mod + '/' + key);
 			if(FileSystem.exists(fileToCheck))
 				return fileToCheck;
-			#if linux
+			#if (android || linux)
 			else
 			{
 				var newPath:String = findFile(key);
@@ -565,10 +560,10 @@ class Paths
 			#end
 			
 		}
-		return #if android StorageUtil.getExternalStorageDirectory() + #else Sys.getCwd() + #end 'mods/' + key;
+		return #if mobile Sys.getCwd() + #end 'mods/' + key;
 	}
 
-	#if linux
+	#if (android || linux)
 	static function findFile(key:String):String {
 		var targetParts:Array<String> = key.replace('\\', '/').split('/');
 		if (targetParts.length == 0) return null;
