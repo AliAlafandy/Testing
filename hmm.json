@@ -36,24 +36,16 @@
       "version": null
     },
     {
-      "name": "tjson",
-      "type": "haxelib",
-      "version": null
-    },
-    {
-      "name": "hxjsonast",
-      "type": "haxelib",
-      "version": null
-    },
-    {
       "name": "hxCodec",
       "type": "haxelib",
-      "version": "2.5.1"
+      "version": null
     },
     {
-      "name": "hscript",
-      "type": "haxelib",
-      "version": null
+      "name": "SScript",
+      "type": "git",
+      "dir": null,
+      "ref": "",
+      "url": "https://github.com/SScript-Guy/SScript-new"
     },
     {
       "name": "hxcpp-debug-server",
@@ -61,25 +53,37 @@
       "version": null
     },
     {
-      "name": "discord_rpc",
-      "type": "git",
-      "dir": null,
-      "ref": "master",
-      "url": "https://github.com/Aidan63/linc_discord-rpc"
+      "name": "tjson",
+      "type": "haxelib",
+      "version": null
     },
     {
-      "name": "hscript-ex",
+      "name": "hxdiscord_rpc",
       "type": "git",
       "dir": null,
-      "ref": "master",
-      "url": "https://github.com/ianharrigan/hscript-ex"
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/hxdiscord_rpc"
+    },
+    {
+      "name": "flxanimate",
+      "type": "git",
+      "dir": null,
+      "ref": "dev",
+      "url": "https://github.com/ShadowMario/flxanimate"
     },
     {
       "name": "linc_luajit",
       "type": "git",
       "dir": null,
       "ref": "master",
-      "url": "https://github.com/nebulazorua/linc_luajit"
+      "url": "https://github.com/superpowers04/linc_luajit"
+    },
+    {
+      "name": "extension-androidtools",
+      "type": "git",
+      "dir": null,
+      "ref": "main",
+      "url": "https://github.com/MAJigsaw77/extension-androidtools"
     }
   ]
 }
